@@ -1,13 +1,32 @@
 {
   "project_info": {
-    "project_number": "214210720031",
-    "project_id": "trial-chat-50554",
-    "storage_bucket": "trial-chat-50554.appspot.com"
+    "project_number": "143976723903",
+    "project_id": "chat-app-project-39208",
+    "storage_bucket": "chat-app-project-39208.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:214210720031:android:5ccbb7d01bc37fa313c02a",
+        "mobilesdk_app_id": "1:143976723903:android:74c7a9ce88bc33befd5d0a",
+        "android_client_info": {
+          "package_name": "com.example.hay_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHxkVvepJMPfZ1j6XkyytysT2spDLDg6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143976723903:android:294204467a62aed8fd5d0a",
         "android_client_info": {
           "package_name": "com.example.trial_chat"
         }
@@ -15,7 +34,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD79vM-NIK7kq0ivIG2z8OQyD1HKWbAjYI"
+          "current_key": "AIzaSyCHxkVvepJMPfZ1j6XkyytysT2spDLDg6k"
         }
       ],
       "services": {
