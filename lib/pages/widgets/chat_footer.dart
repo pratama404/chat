@@ -46,13 +46,13 @@ class ChatFooter extends StatelessWidget {
             ),
           ),
           CupertinoButton(
+            padding: EdgeInsets.zero,
+            onPressed: onSendMessage,
             child: const Icon(
               Icons.send_rounded,
               size: 32,
             ),
-            padding: EdgeInsets.zero,
-            onPressed: onSendMessage,
-          )
+          ),
         ],
       ),
     );

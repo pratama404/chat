@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 16.0),
             //title Code with Bahri
             const Text(
-              'Chat bareang Tera 🦖',
+              'Chat bareng Tera 🦖',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
@@ -88,33 +88,33 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-  
 
-void _login() async {
-  try {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: _emailController.text, password: _passwordController.text,
-    );
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (context) => const HomePage()));
-  } catch (e) {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Error'),
-        content: Text(e.toString()),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            }, 
-            child: const Text('OK'),
-          ),
-        ],
-      ),
-    );
-   }
- }
-
+  void _login() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _emailController.text, password: _passwordController.text,
+      );
+      if (!mounted) return; // Ensure the widget is still in the widget tree
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const HomePage()));
+    } catch (e) {
+      if (!mounted) return; // Ensure the widget is still in the widget tree
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Error'),
+          content: Text(e.toString()),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
+  }
 }

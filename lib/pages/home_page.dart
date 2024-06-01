@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               child: CircularProgressIndicator());
           }
           final List<UserModel> users =(snapshot.data ?? []).where((element) => element.id != currentUser!.uid)
-          .toList(); ;
+          .toList();
           //if user is null
           if (users.isEmpty) {
             return const Center(

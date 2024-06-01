@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'package:trial_chat/pages/login_page.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -16,7 +15,6 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +111,7 @@ class _RegisterPageState extends State<RegisterPage> {
         email: _emailController.text, 
         password: _passwordController.text,
       );
+
       await FirebaseFirestore.instance
           .collection('user')
           .doc(userCredential.user!.uid)
@@ -120,6 +119,8 @@ class _RegisterPageState extends State<RegisterPage> {
         'name': _nameController.text,
         'email': _emailController.text,    
       });
+
+      if (!mounted) return; // Ensure the widget is still in the widget tree
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => const LoginPage(),
@@ -127,6 +128,7 @@ class _RegisterPageState extends State<RegisterPage> {
       );
 
     } catch (e) {
+      if (!mounted) return; // Ensure the widget is still in the widget tree
       showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -138,7 +140,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 onPressed: () {
                   Navigator.of(context).pop();
                 }, 
-              child: const Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           );

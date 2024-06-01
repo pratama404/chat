@@ -36,7 +36,7 @@ class _ChatPageState extends State<ChatPage> {
           ),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text(widget.partnerUser.userName, style: TextStyle(color: Colors.white)),
+        title: Text(widget.partnerUser.userName, style: const TextStyle(color: Colors.white)),
         backgroundColor: Colors.blueGrey,
       ),
       body: Column(
@@ -72,39 +72,6 @@ class _ChatPageState extends State<ChatPage> {
                         type: BubbleType.alone,
                       );
                     },
-                    // children: const [
-                    //   // Chat room messages here
-                    //   ChatBubble(
-                    //     direction: Direction.left,
-                    //     message: 'Haloooo',
-                    //     photoUrl: null,
-                    //     type: BubbleType.alone,
-                    //   ),
-                    //   ChatBubble(
-                    //     direction: Direction.right,
-                    //     message: 'Haloooo',
-                    //     photoUrl: null,
-                    //     type: BubbleType.alone,
-                    //   ),
-                    //   ChatBubble(
-                    //     direction: Direction.left,
-                    //     message: 'Haloooo',
-                    //     photoUrl: null,
-                    //     type: BubbleType.alone,
-                    //   ),
-                    //   ChatBubble(
-                    //     direction: Direction.right,
-                    //     message: 'Haloooo',
-                    //     photoUrl: null,
-                    //     type: BubbleType.alone,
-                    //   ),
-                    //   ChatBubble(
-                    //     direction: Direction.left,
-                    //     message: 'Haloooo',
-                    //     photoUrl: null,
-                    //     type: BubbleType.alone,
-                    //   )
-                    // ],
                   );
               }
             ),
@@ -116,7 +83,7 @@ class _ChatPageState extends State<ChatPage> {
                 Expanded(
                   child: TextField(
                     controller: _messageController,
-                    decoration: const  InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Type a message...',
                     ),
                   ),
