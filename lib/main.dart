@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:trial_chat/pages/login_page.dart';
-import 'package:trial_chat/pages/register_page.dart';
 
 import 'firebase_options.dart';
 import 'pages/home_page.dart';

@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:trial_chat/data/datasources/firebase_datasources.dart';
-import 'package:trial_chat/pages/login_page.dart';
 
 import '../data/model/user_model.dart';
 import 'chat_page.dart';
